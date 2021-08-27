@@ -57,6 +57,26 @@ nav {
   height: 50px;
   text-align: center;
 }
+nav::after {
+  content: "";
+  height: 150px;
+  width: 150px;
+  background: radial-gradient(
+    circle closest-side,
+    rgba(255, 255, 255, 0.658),
+    transparent
+  );
+  position: absolute; /* ::after    dayman tkon position : absolute*/
+  transform: translate(-50%, -50%);
+  transition: 0.25s;
+  z-index: 20;
+  opacity: 0;
+  left: var(--x); /* hadi (x) w (y) na9dro n3aytoulha f javaScript*/
+  top: var(--y);
+}
+nav:hover::after {
+  opacity: 1;
+}
 ul {
   display: flex;
   align-items: center;

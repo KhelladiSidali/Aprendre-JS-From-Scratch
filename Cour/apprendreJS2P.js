@@ -144,10 +144,11 @@ form.addEventListener("submit", (e) => {
 
 // --------------------------------------------------------------------
 // Load event
+// ba3d ma tatla3 la page
 
-window.addEventListener("load", () => {
-  console.log("Document Charger !");
-});
+// window.addEventListener("load", () => {
+//   console.log("Document Charger !");
+// });
 
 //-----------------------------------------------------------------------
 // ForEach
@@ -289,23 +290,97 @@ btn2.addEventListener("click", () => {
 
 // prompt
 
-btn1.addEventListener('click', () => {
+btn1.addEventListener("click", () => {
   let answer = prompt("Entrer votre nom !");
-  questionContainer.innerHTML += "<h3>Bravo " + answer +"</h3>"
+  questionContainer.innerHTML += "<h3>Bravo " + answer + "</h3>";
   /* += darnaha bch ma yrohch kaml wch kayn f question container */
   /* sayi b = omb3d sayi b += */
 });
 
-//    ! ! !   important   ! ! ! 
+//    ! ! !   important   ! ! !
 
 // Timer, compte a rebours
 
 setTimeout(() => {
   questionContainer.style.borderRadius = "300px";
-},2000);
+}, 2000);
 
 // explication setTimeout hiya li tgerer lwa9t w9tach tasra kch instruction
 // kima had lhala 9olnalha diri borderRadius ta3 300px l questionContainer ba3d
 // 2s  (2000 = 2 seconds)
 
-// 
+// setInterval
+
+// let interval = setInterval(() => {
+//   document.body.innerHTML += `
+//   <div class='box'>
+//   <h2>Nouvelle boite !</h2>
+//   <div/>
+//   `;
+// }, 60000);
+
+// pour stoper setInterval
+// ki naklikiw 3la body tahbas
+// document.body.addEventListener("click", (e) => {
+//   // console.log(e.target);
+//   // e.target.remove(); /* hadi hab y9ol ki naklikiw 3la kch haja dakhl body tatsuprima */
+//   clearInterval(interval);
+// });
+
+// location
+// console.log(
+//   location.href
+// ); /*example : http://127.0.0.1:5500/apprendreJS2P.html */
+// console.log(location.host); /*example : 127.0.0.1:5500 */
+// console.log(location.pathname); /*example : apprendreJS2P.html */
+// console.log(
+//   location.search
+// ); /* hadi ki tkon takhdam b backend kima php ...etc..*/
+// location.replace("https://google.com");   /*hadi tbal la page kaml w dir f plasetha google.com */
+
+// example
+// window.onload = () => {
+//   location.replace("https://facebook.com");
+// };
+
+// Navigator
+// console.log(navigator.userAgent); /* les information ta3 l'utilisateur */
+
+// Geolocation
+// pour avoir les position de nos utilisateurs
+// le lien  https://developer.mozilla.org/fr/docs/Web/API/Geolocation/getCurrentPosition
+
+// var options = {
+//   enableHighAccuracy: true,
+//   timeout: 5000,
+//   maximumAge: 0,
+// };
+
+// function success(pos) {
+//   var crd = pos.coords;
+
+//   console.log("Votre position actuelle est :");
+//   console.log(`Latitude : ${crd.latitude}`);
+//   console.log(`Longitude : ${crd.longitude}`);
+//   console.log(`La précision est de ${crd.accuracy} mètres.`);
+// }
+
+// function error(err) {
+//   console.warn(`ERREUR (${err.code}): ${err.message}`);
+// }
+
+// navigator.geolocation.getCurrentPosition(success, error, options);
+
+// history
+// console.log(history);
+// window.history.back(); /*hadi taja3 la page li mn 9bal nasha9oha ki yakliki 3la kch haja*/
+// history.go(-2); /*par exemple hna darna twali b 2 page en arrière */
+
+// ------------------------------------------------------------------------------
+// setProperty
+window.addEventListener("mousemove", (e) => {
+  nav.style.setProperty("--x", e.layerX + "px");
+  nav.style.setProperty("--y", e.layerY + "px");
+});
+
+//     FIN DU 2ème COURS
