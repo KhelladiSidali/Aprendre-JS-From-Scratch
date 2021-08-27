@@ -236,10 +236,10 @@ document.body.addEventListener(
 // ----------------------------------------------------------------------------
 // Stop propagation
 
-questionContainer.addEventListener("click", (e) => {
-  alert("test !");
-  e.stopPropagation();
-});
+// questionContainer.addEventListener("click", (e) => {
+//   alert("test !");
+//   e.stopPropagation();
+// });
 
 // ! ! ! Remarque ! ! ! : ki naklikiw f questionContainer nchoufo f la console bli
 // khraj "click 2 !!"
@@ -277,10 +277,35 @@ questionContainer.addEventListener("click", (e) => {
 // w bch norol9o la page automatiquement ndiro "window.close()"
 
 // cofirm
+
 btn2.addEventListener("click", () => {
   confirm("Voulez vous vraiment vous tromper ?");
 });
+
 // confirm tachabah l alert
 // alert ki tokhroj w thab tnahiha ymadolk boutton "OK"
 // w confirm ymadolk boutton "OK" w "Annuler"
-// ida dart "Annuler" tsama keli ma clikitch 3la l'evenement
+// ida dart "Annuler" tsama keli ma clikitch 3la btn2
+
+// prompt
+
+btn1.addEventListener('click', () => {
+  let answer = prompt("Entrer votre nom !");
+  questionContainer.innerHTML += "<h3>Bravo " + answer +"</h3>"
+  /* += darnaha bch ma yrohch kaml wch kayn f question container */
+  /* sayi b = omb3d sayi b += */
+});
+
+//    ! ! !   important   ! ! ! 
+
+// Timer, compte a rebours
+
+setTimeout(() => {
+  questionContainer.style.borderRadius = "300px";
+},2000);
+
+// explication setTimeout hiya li tgerer lwa9t w9tach tasra kch instruction
+// kima had lhala 9olnalha diri borderRadius ta3 300px l questionContainer ba3d
+// 2s  (2000 = 2 seconds)
+
+// 
