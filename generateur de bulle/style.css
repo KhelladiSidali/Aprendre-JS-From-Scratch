@@ -1,0 +1,15 @@
+/* les  commentaire yahadro 3la la ligne li fo9hom */
+body {
+  overflow: hidden;
+  /*li yakhroj 3la body yroh*/
+  min-height: 100vh;
+  /* color: #fff;
+  background: rgba(0, 0, 0, 0.815); */
+}
+.bubble {
+  position: absolute;
+  /*absolute 3la khatch yazordo*/
+  border-radius: 300px;
+  /*darna 300px bch nkono sur bli tkon un cercle*/
+  background: rgba(255, 166, 0, 0.6);
+}
